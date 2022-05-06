@@ -1,0 +1,22 @@
+{
+  "name": "serenaredacretest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsuber/serenaRedAcreTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrsuber/serenaRedAcreTest/issues"
+  },
+  "homepage": "https://github.com/mrsuber/serenaRedAcreTest#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}
