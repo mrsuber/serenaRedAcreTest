@@ -1,0 +1,6 @@
+.form__wapper{
+  display: flex;
+}
+.form__equaltoSign{
+  margin:0 10px;
+}
