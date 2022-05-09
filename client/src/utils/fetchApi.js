@@ -1,4 +1,34 @@
+import {useEffect,useState} from 'react'
 import axios from 'axios'
+import {csv} from 'd3'
+
+
+const Coinurl = "https://raw.githubusercontent.com/mrsuber/SVG-css-colors/master/crypto.csv"
+const Currencyurl = "https://raw.githubusercontent.com/mrsuber/SVG-css-colors/master/curency.csv"
+
+
+// points on wordMap data
+export const getCrypto = async ()=>{
+    let array = [];
+    const res =await csv(Coinurl)
+
+    for(let i=0;i<res.length;i++){
+      array.push({text: res[i].symbol, value:res[i].symbol, icon:<img src={res[i].img_url} style={{width:"16px",height:"16px"}}/>})
+    }
+
+  return array;
+}
+
+export const getCurencies = async ()=>{
+    let array = [];
+    const res =await csv(Currencyurl)
+  
+    for(let i=0;i<res.length;i++){
+      array.push({text: res[i].code, value:res[i].code, icon:<img src={res[i].icon} style={{width:"16px",height:"16px"}}/>})
+    }
+
+  return array;
+}
 
 
 
@@ -20,19 +50,28 @@ headers: {
 
 }
 
-export const getCrypto = async()=>{
+export const getCrypto2 = async()=>{
 
 
 const options = {
 method: 'GET',
-url: 'https://raw.githubusercontent.com/ErikThiart/cryptocurrency-icons/master/coin_map.json',
+// url: 'https://raw.githubusercontent.com/ErikThiart/cryptocurrency-icons/master/coin_map.json',
+url:'https://raw.githubusercontent.com/mrsuber/SVG-css-colors/master/crypto.csv',
 params: {output: 'JSON'},
 headers: {
 }
 };
   try{
+    let array = []
     const res = await axios.request(options)
-    return res
+    console.log(res.data)
+
+      for(let i=0;i<res.data.length;i++){
+        array.push({label: res.data[i].symbol, value:res.data[i].symbol, })
+      }
+
+
+    return array
 
   }catch(err){
     console.log(err)
@@ -42,16 +81,7 @@ headers: {
 
 
 
-export const getCurencies = async()=>{
-//   const options = {
-//   method: 'GET',
-//   url: 'https://currencyapi-net.p.rapidapi.com/currencies',
-//   params: {output: 'JSON'},
-//   headers: {
-//     'X-RapidAPI-Host': 'currencyapi-net.p.rapidapi.com',
-//     'X-RapidAPI-Key': '71c87e772emshac10e117b64699ap103d42jsnf97038ee55de'
-//   }
-// };
+export const getCurencies2 = async()=>{
 
 const options = {
 method: 'GET',
@@ -61,8 +91,16 @@ headers: {
 }
 };
   try{
+    let array = [];
     const res = await axios.request(options)
+
+    //
+    // for(let i=0;i<res.length;i++){
+    //   array.push({text: res[i].symbol, value:res[i].symbol, icon:<img src={res[i].img_url} style={{width:"16px",height:"16px"}}/>})
+    // }
+    console.log("currencies",res.data)
     return res
+
 
   }catch(err){
     console.log(err)
