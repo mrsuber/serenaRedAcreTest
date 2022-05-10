@@ -32,15 +32,9 @@ function App() {
   setExchangeRate(response.data)
   }
 
-  // let data ={
-  //   currencyFrom:"BTC",
-  //   currencyTo:"USD",
-  //   amount:"1"}
-
-  // console.log({crypto:allCrypto,currency:allCurencies,exchangeRate:exchangeRate})
-
   return (
     <div className="App">
+
       <Toldbar allcoins={allCrypto} allcurrencies={allCurencies} getExchangeFromCrptoToCurencies={getExchangeFromCrptoToCurencies}/>
     </div>
   );

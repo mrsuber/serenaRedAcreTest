@@ -1,6 +1,6 @@
 import {useState} from 'react'
-
-import Select from 'react-select';
+import './dropdown.css'
+import Select, {components}from 'react-select';
 const DropdownMenu = ({id,options,label}) => {
 
    const [selectedOption, setSelectedOption] = useState(null);
@@ -10,17 +10,29 @@ const DropdownMenu = ({id,options,label}) => {
      setSelectedOption(e);
    }
 
+   const DropdownIndicator = (
+  props: ElementConfig<typeof components.DropdownIndicator>
+) => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 2 24 24"><path fill="currentColor" d="m12 14l-4-4h8z"/></svg>
+    </components.DropdownIndicator>
+  );
+};
+
    return (
-     <div className="App">
+     <div className="dropdown__container">
       <label for={id} className="dropdown__lable" >{label} </label>
        <Select id={id}
+        className="dropdown__select"
          placeholder="Select Option"
+         components={{ DropdownIndicator }}
          value={selectedOption}
          options={options}
          onChange={handleChange}
          selectedValue={options[0]}
          getOptionLabel={e => (
-           <div style={{ display: 'flex', alignItems: 'center' }}>
+           <div style={{ display: 'flex', alignItems: 'center'}}>
              {e.icon}
              <span style={{ marginLeft: 5, marginRight:10 }}>{e.text}</span>
            </div>

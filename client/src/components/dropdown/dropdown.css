@@ -1,0 +1,47 @@
+.dropdown__container label{
+  margin-bottom: 5px;
+  color: hsl(0deg 0% 49%);
+}
+
+.dropdown__select{
+margin-top: 5px;
+display: block;
+}
+
+.css-qc6sy-singleValue {
+    margin-bottom: 10px;
+  }
+
+.css-1s2u09g-control,.css-1pahdxg-control,.css-1s2u09g-control {
+    /* margin: 20px 10px; */
+    min-width: 150px !important;
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+}
+.css-1okebmr-indicatorSeparator{
+  display: none;
+}
+.css-14el2xx-placeholder {
+    margin-bottom: 8px;
+  }
+
+.css-26c3qy-menu{
+margin-top: 5px;
+}
+
+.css-1s2u09g-control:hover {
+    border-color: hsl(0, 0%, 70%);
+    background: hsl(0, 0%, 70%);
+}
+
+.css-tlfecz-indicatorContainer {
+    color: hsl(0deg 0% 43%);}
+
+
+  @media screen and (max-width: 726px) {
+   .dropdown__container{
+       width: 100%;
+       margin-bottom: 10px;
+      }
+    }
