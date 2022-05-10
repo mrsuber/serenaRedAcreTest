@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './button.css'
 const Button = () => {
   return (
-    <button>save</button>
+    <button className="btn__primary">Save</button>
   )
 }
 

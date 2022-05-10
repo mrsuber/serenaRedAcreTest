@@ -13,7 +13,7 @@ export const getCrypto = async ()=>{
     const res =await csv(Coinurl)
 
     for(let i=0;i<res.length;i++){
-      array.push({text: res[i].symbol, value:res[i].symbol, icon:<img src={res[i].img_url} style={{width:"16px",height:"16px"}}/>})
+      array.push({text: res[i].name, value:res[i].symbol, icon:<img src={res[i].img_url} style={{width:"16px",height:"16px",margin:"0 5px"}}/>})
     }
 
   return array;
@@ -22,9 +22,9 @@ export const getCrypto = async ()=>{
 export const getCurencies = async ()=>{
     let array = [];
     const res =await csv(Currencyurl)
-  
+
     for(let i=0;i<res.length;i++){
-      array.push({text: res[i].code, value:res[i].code, icon:<img src={res[i].icon} style={{width:"16px",height:"16px"}}/>})
+      array.push({text: res[i].code, value:res[i].code, icon:<img src={res[i].icon} style={{width:"16px",height:"16px",margin:"0 5px"}}/>})
     }
 
   return array;

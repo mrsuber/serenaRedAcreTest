@@ -9,7 +9,8 @@ const Toldbar = ({allcoins,allcurrencies,getExchangeFromCrptoToCurencies}) =>{
 
 
   return(
-    <div>
+    <div className="toolkid_container">
+      <h2 className="toolkid__heading">Exchange</h2>
       <form className="form__wapper">
       <DropdownMenu id={1} options={allcoins} label="Currency from" />
       <NumberInput id="n1" label="Amount"/>

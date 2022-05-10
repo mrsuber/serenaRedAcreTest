@@ -1,6 +1,36 @@
 .form__wapper{
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
 }
 .form__equaltoSign{
-  margin:0 10px;
+
+      margin: 0px 15px;
+      position: relative;
+      top: 18px;
+      color: hsl(0deg 0% 49%);
+
+}
+
+
+.toolkid__heading{
+margin-bottom: 20px;
+}
+
+@media screen and (max-width: 726px) {
+  .toolkid_container{
+    width: 100%;
+  }
+  .form__wapper{
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 14px;
+    position: relative;
+    left: -23px;
+  }
+  .form__equaltoSign{
+    display: none;
+  }
 }
