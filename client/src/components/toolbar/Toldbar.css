@@ -1,8 +1,13 @@
+.toolkid_container{
+  background: #fff;
+}
 .form__wapper{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 55px;
+  box-shadow: 0 4px 2px -2px gray;
 
 }
 .form__equaltoSign{
@@ -14,6 +19,10 @@
 
 }
 
+
+.toolkid-form__wrapper{
+  padding: 10px;
+}
 
 .toolkid__heading{
 margin-bottom: 20px;

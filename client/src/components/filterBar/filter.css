@@ -1,0 +1,16 @@
+.form__wapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+
+}
+.filter-form__wrapper {
+    padding: 10px;
+
+}
+
+.form__wapper2 input{
+  margin: 0 10px;
+}

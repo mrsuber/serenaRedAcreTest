@@ -1,13 +1,22 @@
 import {useState} from 'react'
 import './dropdown.css'
 import Select, {components}from 'react-select';
-const DropdownMenu = ({id,options,label}) => {
+const DropdownMenu = ({id,options,label,setValue1,value1,value3, setValue3,}) => {
 
    const [selectedOption, setSelectedOption] = useState(null);
 
    // handle onChange event of the dropdown
    const handleChange = e => {
-     setSelectedOption(e);
+
+     if(id===1){
+       setValue1(e)
+       // console.log("v1",e)
+
+     }else{
+       setValue3(e)
+          // console.log("v3",e)
+     }
+
    }
 
    const DropdownIndicator = (
@@ -27,7 +36,7 @@ const DropdownMenu = ({id,options,label}) => {
         className="dropdown__select"
          placeholder="Select Option"
          components={{ DropdownIndicator }}
-         value={selectedOption}
+         value={id===1?value1:value3}
          options={options}
          onChange={handleChange}
          selectedValue={options[0]}
