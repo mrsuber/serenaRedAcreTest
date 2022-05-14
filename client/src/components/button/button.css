@@ -10,11 +10,38 @@
   cursor: pointer;
   margin-left: 15px;
   font-size: 14px;
+  transition: 0.4s ease;
+}
+.btn__primary:hover{
+  background: #fff;
+  color:hsl(122deg 57% 59%);
+  border:1px solid hsl(122deg 57% 59%);
+}
+
+.btn__filter{
+  margin: 0 5px;
+padding: 9px 19px;
+position: relative;
+top: 13px;
+border: 1px solid blue;
+background: #fff;
+font-size: 16px;
+font-weight: 400;
+border-radius: 5px;
+cursor: pointer;
+color:hsl(0deg 0% 49%);
+transition: 0.4s ease;
+}
+
+.btn__filter:hover{
+  color: #fff;
+  background:blue;
+
 }
 
 @media screen and (max-width: 726px) {
 .btn__primary{
      width: 100%;
-    
+
     }
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import './button.css'
-const Button = () => {
+const Button = ({type}) => {
   return (
-    <button className="btn__primary">Save</button>
+    <button className="btn__primary" type={type}>Save</button>
   )
 }
 
